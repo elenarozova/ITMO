@@ -1,0 +1,166 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>lab1</title>
+
+    <style>
+        body {
+            height: 100vh;
+            text-align: center;
+            background-color: pink;
+            /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWw6OVMvLtvIhNgAjLBAz0LXOdQXP-ZZG8q0QXLq9B2HBXm8t7GyBLSp7W&s=10");  */
+            background-image: url("https://img.magnific.com/free-vector/powder-pastel-with-hand-drawn-elements-background_52683-40299.jpg?semt=ais_hybrid&w=740&q=80");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #2f353b;
+            font-family:Arial, Helvetica, sans-serif ;
+            font-size: 25px;
+        }
+        table {
+            margin: 0 auto;
+            padding: 10px ;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 24px;
+            background-color: aliceblue;
+        }
+        button {
+            background-color: pink;
+            color: white;
+            margin: 2px;
+            padding: 5px 10px;
+            font-size: 20px;
+            border: 0;
+            border-radius: 10px;
+        }
+        
+        button:hover {
+            background-color: palevioletred;
+        }
+
+        #senderForm {
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+
+        header {
+            border-radius: 25px;
+            padding: 10px;
+            font-size: 30px;
+            font-family: cursive;
+            background-color: #FFAAC8;
+            margin-bottom: 50px;
+        }
+        .table_for_reults{
+            border: 1px solid plum;
+            border-collapse: collapse;
+            
+        }
+        .table_for_reults td, th {
+            border: 2px solid plum;
+            
+            padding: 10px;
+            
+        }
+        input[type="text"]{
+            padding: 8px 12px;
+            font-size: 25px;
+            border: 5px solid #FFAAC8 ;
+            border-radius: 25px;
+            margin: 10px;
+        }
+        header::first-letter{
+            font-size: 35px;
+            color: rgb(41, 4, 38);
+        }
+        canvas{
+            margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <header >
+                    Розова Елена Алексеевна <br>
+                    группа: 3210 <br> вариант:12666
+                </header>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="" id="forma">
+                    <label for="valueX" id="labelX"></label>
+                    <div id="valueX"></div>
+                    <input type="hidden" id="inputX" name="valueX" value="">
+
+
+                    <br>
+                    <label for="Ytext">Выберите Y (-5;5)</label> <br>
+                    <input type="text" id="Ytext" name="Ytext" class="text_place" maxlength="17">
+                    
+                    <br><br>
+                    <label for="Rtext">Выберите R (2;5)</label> <br>
+                    <input type="text" id="Rtext" name="Rtext" class="text_place" maxlength="17">
+
+                    <br><br>
+                    <button type="submit" id="senderForm">Отправить</button>
+                    <br><br>
+                    <div id="error"></div>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <canvas id="grafic" width="600" height="600"></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <form action="" id="pagForm" >
+                <label for="textPagin" id="labPag">Введите количество строчек на странице таблицы</label>
+                <br>
+                <input type="text" id="textPagin" name="textPagin">
+                <button type="submit" id="buttonPagin">Пагинаци</button>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="last"><</button>
+                <button id="clearLocalStorage">Отчистить таблицу</button>
+                <button id="next">></button>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <table class="table_for_reults">
+                    <thead>
+                    <tr class="table_for_reults">
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>R</th>
+                        <th>Результат</th>
+                        <th>Дата и время</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table_for_reults" id="bodyTable"></tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
