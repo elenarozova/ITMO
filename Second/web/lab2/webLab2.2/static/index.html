@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Rozova Elena lab2</title>
+    <link rel="stylesheet" href="style1.css">
+  </head>
+  <body>
+    <header>
+        Розова Елена Алексеевна <br>
+        группа: 3210 <br> вариант:790
+    </header>
+
+    <main>
+      <div id="canvasform">
+        <div id="formDiv">
+            <form action="" id="forma">
+                <label for="inputX" id="labelX"></label>
+                <div id="valueX"></div>
+                <input type="hidden" id="inputX" name="valueX" value="">
+
+
+                <br>
+                <label for="Ytext">Выберите Y (-3;3)</label> <br>
+                <input type="text" id="Ytext" name="Ytext" class="text_place" maxlength="17">
+                <br>
+                <label for="Ztext">Выберите Z (-3;3)</label> <br>
+                <input type="text" id="Ztext" name="Ztext" class="text_place" maxlength="17">
+
+                <br><br>
+                 <label for="inputR" id="labelR"></label>
+                <div id="valueR"></div>
+                <input type="hidden" id="inputR" name="valueR" value="">
+
+                <br><br>
+                <button type="submit" id="senderForm">Отправить</button>
+                <br><br>
+                <div id="error"></div>
+            </form>
+        </div>
+        <div id="canvasDiv">
+        <canvas id="grafic" width="600" height="600"></canvas>
+      </div>
+    </div>
+    <div id="tableDiv">
+      <form action="" id="pagForm" >
+          <label for="textPagin" id="labPag">Введите количество строчек на странице таблицы</label>
+          <br>
+          <input type="text" id="textPagin" name="textPagin">
+          <button type="submit" id="buttonPagin">Пагинация</button>
+      </form>
+      <button id="last"><</button>
+      <button id="clearLocalStorage">Отчистить таблицу</button>
+      <button id="next">></button>
+      <table class="table_for_reults">
+          <thead>
+          <tr class="table_for_reults">
+              <th>X</th>
+              <th>Y</th>
+              <th>Z</th>>
+              <th>R</th>
+              <th>Результат</th>
+              <th>Дата и время</th>
+              <th>Время работы скрипта</th>
+          </tr>
+          </thead>
+          <tbody class="table_for_reults" id="bodyTable"></tbody>
+      </table>
+      </div>
+    </main>
+    <script src="js/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
